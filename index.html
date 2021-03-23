@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        section.colors h1 {
+            position: absolute;
+            font-size: 40px;
+            color: blue;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 30px;
+        }
+
+        .color1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 40%;
+            background-color: white;
+            transform: translateX(-50%);
+            top: 150px;
+        }
+
+        .color1.red {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 150px;
+        }
+
+        div.color2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 150px;
+        }
+
+        div.color3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            left: 60%;
+            transform: translateX(-50%);
+            top: 150px;
+        }
+
+        section.interface {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 300px;
+        }
+
+        .interface input {
+            font-size: 30px;
+        }
+
+        .interface button {
+            font-size: 30px;
+            color: red;
+            padding: 0px 10px;
+        }
+
+        .results {
+            position: absolute;
+            left: 20%;
+            transform: translateX(-50%);
+            top: 500px;
+            font-size: 30px;
+        }
+
+        .wallet {
+            position: absolute;
+            left: 20%;
+            transform: translateX(-50%);
+            top: 660px;
+            font-size: 30px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .result {
+            position: absolute;
+            left: 70%;
+            transform: translateX(-50%);
+            top: 600px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <section class="colors">
+            <h1>Jednoręki bandyta</h1>
+            <div class="color1">
+                <div data-option="red"></div>
+                <div data-option="green"></div>
+                <div data-option="blue"></div>
+            </div>
+            <div class="color2">
+                <div data-option="red"></div>
+                <div data-option="green"></div>
+                <div data-option="blue"></div>
+            </div>
+            <div class="color3">
+                <div data-option="red"></div>
+                <div data-option="green"></div>
+                <div data-option="blue"></div>
+            </div>
+        </section>
+
+        <section class="interface">
+            <form action="">
+                <input type="text" placeholder="Wpisz stawkę">
+                <button class="play">Zagraj</button>
+            </form>
+        </section>
+
+        <section class="results">
+            <div class="numbers">Liczba gier: <span>0</span></div>
+            <div class="win">Liczba wygranych: <span>0</span></div>
+            <div class="draw">Liczba remisów: <span>0</span></div>
+            <div class="loss">Liczba przegranych: <span>0</span></div>
+        </section>
+
+        <section class="wallet">
+            <div class="amount">Twoje żetony: <span>100</span></div>
+        </section>
+
+        <section class="currentStatus">
+            <div class="result">W tej rundzie: <span></span></div>
+        </section>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
